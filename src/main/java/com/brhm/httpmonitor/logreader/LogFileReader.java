@@ -21,7 +21,6 @@ public class LogFileReader implements LogReader {
 		String line = null;
 		while((line = bufferedReader.readLine()) == null) {
 			Thread.sleep(1000);
-			System.out.println("waiting for file...");
 		}
 			
 		return this.logPraser.parse(line);
